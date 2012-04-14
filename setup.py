@@ -13,7 +13,7 @@ setup(
     author="Niall O'Higgins",
     author_email='niallo@beyondfog.com',
     description='Useful towel-related stuff.',
-    long_description=open('README.txt').read(),
+    long_description=open('README.md').read(),
     packages=find_packages(),
     include_package_data=True,
     zip_safe=False,
