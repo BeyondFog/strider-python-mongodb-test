@@ -24,6 +24,7 @@ class MongoDBIntegrationTest(TestCase):
 
     def test_write_and_read(self):
         doc = {"key":"my key!", "value":"a value"}
-        self.db["test"].insert(doc, safe=True)
-        r = self.db["test"].findOne({"key":doc["key"]})
-        assert r == doc
+        self.db.foo.insert(doc, safe=True)
+        r = self.db.foo.find_one({"key":doc["key"]})
+        assert r["key"] == doc["key"]
+        assert r["value"] == doc["value"]
