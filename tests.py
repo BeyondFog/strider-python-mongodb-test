@@ -3,7 +3,6 @@ import os
 
 from pymongo.uri_parser import parse_uri
 from unittest import TestCase
-from raven.contrib.django.models import client
 
 class MongoDBIntegrationTest(TestCase):
 
